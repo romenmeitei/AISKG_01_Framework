@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite this repository release and the associated article."
+message: "Please cite this software release and the associated article."
 title: "AISKG Section 1: Literature Retrieval, Topic Modelling, and Ontology-Guided Extraction"
 type: software
 authors:
