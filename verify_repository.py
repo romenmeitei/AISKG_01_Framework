@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify repository files against PACKAGE_MANIFEST.csv."""
+"""Verify every release file listed in PACKAGE_MANIFEST.csv."""
 from __future__ import annotations
 import csv
 import hashlib
@@ -16,22 +16,23 @@ def sha256(path: Path) -> str:
             h.update(chunk)
     return h.hexdigest()
 
-if not MANIFEST.exists():
+if not MANIFEST.is_file():
     raise SystemExit("Missing PACKAGE_MANIFEST.csv")
 
 failures = []
 with MANIFEST.open(newline="", encoding="utf-8") as handle:
     for row in csv.DictReader(handle):
-        path = ROOT / row["path"]
+        rel = row["path"]
+        path = ROOT / rel
         if not path.is_file():
-            failures.append(f"MISSING: {row['path']}")
+            failures.append(f"MISSING: {rel}")
             continue
         actual_size = path.stat().st_size
         actual_hash = sha256(path)
         if actual_size != int(row["bytes"]):
-            failures.append(f"SIZE: {row['path']} expected={row['bytes']} actual={actual_size}")
+            failures.append(f"SIZE: {rel} expected={row['bytes']} actual={actual_size}")
         if actual_hash != row["sha256"]:
-            failures.append(f"SHA256: {row['path']} expected={row['sha256']} actual={actual_hash}")
+            failures.append(f"SHA256: {rel} expected={row['sha256']} actual={actual_hash}")
 
 if failures:
     print("Repository verification FAILED")

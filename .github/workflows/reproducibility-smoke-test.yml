@@ -1,0 +1,29 @@
+name: reproducibility-smoke-test
+
+"on":
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  manuscript-snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install --upgrade pip
+      - run: pip install -r requirements_snapshot.txt
+      - run: python verify_repository.py
+      - name: Run Section 1 snapshot
+        shell: bash
+        run: |
+          rm -rf _ci_inputs _ci_outputs
+          unzip -q Mushroom_KG_Upstream_Inputs_v1.zip -d _ci_inputs
+          python upstream_core.py --mode MANUSCRIPT_SNAPSHOT \
+            --input-dir _ci_inputs --output-dir _ci_outputs
+          test -f _ci_outputs/PIPELINE_SUCCESS.txt

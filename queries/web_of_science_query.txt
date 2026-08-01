@@ -1,0 +1,10 @@
+TS=(
+  "mushroom poisoning"
+  OR "mushroom intoxication"
+  OR "poisonous mushroom"
+  OR mycetism
+  OR amatoxin
+  OR amanitin
+  OR "mushroom toxin"
+  OR "Amanita poisoning"
+)
