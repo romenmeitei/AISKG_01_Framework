@@ -16,6 +16,7 @@ jobs:
         with:
           python-version: '3.12'
           cache: pip
+          cache-dependency-path: requirements_snapshot.txt
       - run: python -m pip install --upgrade pip
       - run: pip install -r requirements_snapshot.txt
       - run: python verify_repository.py
