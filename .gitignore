@@ -4,15 +4,13 @@ __pycache__/
 .ipynb_checkpoints/
 .pytest_cache/
 
-# Virtual environments
+# Local virtual environments
 .venv/
 venv/
 env/
 
-# Local run outputs; curated reference_outputs/ remains tracked
+# Local run outputs (reference outputs in the repository are intentionally tracked)
 mushroom_kg_*_run*/
-_ci_inputs/
-_ci_outputs/
 outputs/
 *.tmp
 .DS_Store

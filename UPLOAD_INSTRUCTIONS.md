@@ -1,22 +1,35 @@
-# Upload instructions — AISKG_01_Framework
+# Upload instructions for AISKG_01_Framework
 
-The safest method is to clone the current repository, replace its contents with
-this folder, and commit the changes.
+## Recommended Git command workflow
 
 ```bash
 git clone https://github.com/romenmeitei/AISKG_01_Framework.git
 cd AISKG_01_Framework
+# Copy all files from this upload-ready directory into the clone, preserving
+# the queries/ and reference_outputs/ directories.
 rm -f CITATION.cff.template GITHUB_ROOT_README.md \
-  LICENSE_SELECTION_REQUIRED.md REPOSITORY_TEST_STATUS.md
-# Copy all files from the upload-ready folder here, preserving directories.
+      LICENSE_SELECTION_REQUIRED.md REPOSITORY_TEST_STATUS.md
 python verify_repository.py
 git add -A
-git commit -m "Complete reproducibility release v1.0.0"
+git commit -m "Complete Section 1 reproducibility release"
 git push origin main
-git tag -a v1.0.0 -m "Publication reproducibility release v1.0.0"
-git push origin v1.0.0
 ```
 
-GitHub's browser uploader also works for these file sizes, but folders such as
-`queries/`, `reference_outputs/`, and `.github/workflows/` must be preserved,
-and the four obsolete root files must be deleted manually.
+## Files to delete from the current public repository
+
+- `CITATION.cff.template`
+- `GITHUB_ROOT_README.md`
+- `LICENSE_SELECTION_REQUIRED.md`
+- `REPOSITORY_TEST_STATUS.md`
+
+They are replaced by the finalized `CITATION.cff`, `README.md`, and `LICENSE`.
+
+## Browser upload
+
+GitHub's browser uploader can add files, but preserve the directory structure
+for `queries/` and `reference_outputs/`. Delete the obsolete files listed above
+manually. After upload, run or locally download the repository and execute:
+
+```bash
+python verify_repository.py
+```

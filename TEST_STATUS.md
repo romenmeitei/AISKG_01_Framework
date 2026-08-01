@@ -53,6 +53,19 @@ All smoke tests passed.
 
 The notebook uses compatible version ranges and avoids downloading a spaCy language model in snapshot mode. Exact result audits and the full Section 2 fixed-result suite provide safeguards against environment-related drift.
 
-## Publication-release integrity
+## Upload-ready release validation
 
-The upload-ready v1.0.0 repository includes exact query files, tested reference outputs, corrected current-repository links, a cross-platform SHA-256 verifier, and an automated Python 3.12 GitHub Actions smoke test.
+The repository-specific Colab badge and automatic companion-ZIP URL were
+updated for `AISKG_01_Framework`. The updated notebook was executed from the
+first code cell through the final code cell in an isolated working directory.
+It completed with zero cell errors and regenerated the deterministic reference
+output archive included in `reference_outputs/`.
+
+## Upload-ready release validation
+
+The repository-specific Colab badge and automatic companion-ZIP URL were
+updated for `AISKG_01_Framework`. The updated notebook was executed from the
+first code cell through the final code cell in an isolated working directory.
+It completed with zero cell errors and regenerated the deterministic reference
+output archive included in `reference_outputs/`.
+

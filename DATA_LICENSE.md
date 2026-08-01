@@ -1,36 +1,37 @@
-# Data, annotations, and third-party content
+# Data, annotation, and third-party-content notice
 
 ## Original software
 
-Original source code and software documentation are licensed under the MIT
-License in the root `LICENSE` file.
+The original source code and software documentation in this repository are
+licensed under the MIT License in the root `LICENSE` file.
 
-## Author-created annotations and derived outputs
+## Original research annotations and derived tables
 
-To the extent that Lourembam Romen Meitei owns the necessary rights, original ontology tables,
-manual curation records, validation labels, data dictionaries, and derived
-result tables created for this project are made available under the Creative
-Commons Attribution 4.0 International License (CC BY 4.0):
+Unless a file states otherwise, original ontology tables, expert-curation
+records, validation labels, data dictionaries, and derived result tables
+created for this project are made available under the Creative Commons
+Attribution 4.0 International license (CC BY 4.0):
 https://creativecommons.org/licenses/by/4.0/
 
-Attribution should identify **Lourembam Romen Meitei**, the repository title and version, and
-the associated manuscript. Materials created jointly with other contributors
-remain subject to their rights unless permission or assignment has been
-obtained.
+Attribution should identify **Lourembam Romen Meitei** and cite the associated
+software release and manuscript.
 
 ## Third-party bibliographic content
 
-Article titles, abstracts, affiliations, identifiers, and metadata obtained
-from PubMed, Scopus, Web of Science, publishers, or other providers retain the
-rights and use restrictions of their original sources. They are **not**
-relicensed by the MIT or CC BY 4.0 notices in this repository.
+Article titles, abstracts, affiliations, identifiers, and bibliographic
+metadata obtained from PubMed, Scopus, Web of Science, publishers, or other
+providers remain subject to the rights and terms of their original providers.
+They are not relicensed by the MIT or CC BY 4.0 notices above. Users are
+responsible for complying with the relevant database, publisher, institutional,
+and API terms.
 
-The presence of third-party material in a frozen research snapshot does not
-establish unrestricted redistribution rights. Users must comply with relevant
-publisher, database, API, institutional-subscription, and text-and-data-mining
-terms.
+The presence of third-party material in a frozen research snapshot is not a
+transfer of copyright and is not a representation that unrestricted public
+redistribution is permitted. Before public release, the repository owner and
+institution should verify redistribution rights for licensed bibliographic
+content, especially Scopus- and Web of Science-derived abstracts or metadata.
 
-## Third-party dependencies
+## Dependencies
 
-Python packages, models, APIs, and other dependencies retain their own
-licenses. Consult each upstream project and service before reuse.
+Third-party Python packages and models retain their own licenses. See the
+package metadata and upstream project documentation for those terms.
