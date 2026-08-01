@@ -1,0 +1,9 @@
+Publication release tested with:
+Python 3.13.5
+pandas 2.2.3
+NumPy 2.3.5
+SciPy 1.17.0
+spaCy 3.8.11
+Matplotlib 3.10.8
+
+Google Colab target: Python 3.12+ with requirements_snapshot.txt.

@@ -1,0 +1,18 @@
+# Python and notebook caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local run outputs; curated reference_outputs/ remains tracked
+mushroom_kg_*_run*/
+_ci_inputs/
+_ci_outputs/
+outputs/
+*.tmp
+.DS_Store

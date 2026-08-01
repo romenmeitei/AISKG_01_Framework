@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite this software release and the associated article."
+title: "AISKG Section 1: Literature Retrieval, Topic Modelling, and Ontology-Guided Extraction"
+type: software
+authors:
+  - family-names: "Lourembam"
+    given-names: "Romen Meitei"
+repository-code: "https://github.com/romenmeitei/AISKG_01_Framework"
+url: "https://github.com/romenmeitei/AISKG_01_Framework"
+version: "1.0.0"
+date-released: "2026-08-01"
+license: MIT
+keywords:
+  - biomedical natural language processing
+  - semantic knowledge graph
+  - BERTopic
+  - ontology-guided extraction
+  - mushroom poisoning
