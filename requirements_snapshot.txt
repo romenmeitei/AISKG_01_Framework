@@ -4,3 +4,4 @@ scipy>=1.13,<2
 spacy>=3.8,<3.9
 matplotlib>=3.8,<4
 openpyxl>=3.1,<4
+click>=8.1,<9
